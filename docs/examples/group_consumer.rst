@@ -46,7 +46,7 @@ Consumer:
         import asyncio
         from aiokafka import AIOKafkaConsumer
 
-        async def consume():
+        async def consume(group_id, msg_cnt):
             consumer = AIOKafkaConsumer(
                 'some-topic',
                 group_id=group_id,
